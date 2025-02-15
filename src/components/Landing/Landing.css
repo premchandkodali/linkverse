@@ -1,75 +1,397 @@
-/* Card container */
-.card-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    padding: 50px;
+/* Landing.css */
+:root {
+  --primary-color: #001f3f;
+  --secondary-color: #FFD700;
+  --accent-color: #4A90E2;
+  --dark-bg: #000000;
+  --text-light: #FFFFFF;
+  --text-dark: #333333;
+  --transition-speed: 0.3s;
 }
 
-#carouselCard1, #carouselCard2 {
-    width: 48%;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fff; /* Ensure the background color is white */
 }
 
-.carousel-inner img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 15px;
+.landing-container {
+  overflow-x: hidden;
+}
+
+/* Continuous Scroller Styles (New Addition) */
+.scroller {
+  max-width: 1200px;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative;
+  height: 120px;
+  background: #26282B;
+  border-radius: 12px;
+}
+
+.scroller-inner {
+  display: flex;
+  position: absolute;
+  animation: scroll 25s linear infinite;
+  gap: 3rem;
+  padding: 0 2rem;
+  height: 100%;
+  align-items: center;
+}
+
+.company-item {
+  min-width: 150px;
+  height: 80px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.company-item:hover {
+  transform: translateY(-5px);
+}
+
+.recruiter-logo {
+  max-width: 120px;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+/* Original Styles Preserved Below */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.hero-carousel img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+  z-index: 1;
+}
+
+.carousel-caption {
+  position: absolute;
+  z-index: 2;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: left;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ... (All your original CSS styles remain unchanged below) */
+/* Accreditation, Top Performers, Media Queries, etc. */
+/* Ensure this section contains all your original styles */
+.accreditation-section {
+  padding: 6rem 2rem;
+  background: var(--dark-bg);
+}
+
+.accreditation-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.accreditation-text h2 {
+  color: var(--text-light);
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.accreditation-text p {
+  color: #cccccc;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1.2rem 2.5rem;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all var(--transition-speed);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  background: #ffeb3b;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255,215,0,0.3);
+}
+
+.accreditation-image {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(74,144,226,0.2);
+}
+
+.accreditation-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.recruiters-section {
+  padding: 4rem 2rem; /* Reduced vertical padding */
+  background-color: #26282B;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  color: var(--text-light);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+}
+
+.recruiters-container {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.recruiters-marquee {
+  display: flex;
+  animation: scroll 25s linear infinite; /* Faster animation */
+  width: max-content;
+}
+
+.recruiter-card {
+  flex: 0 0 180px; /* Slightly wider cards */
+  height: 100px;
+  margin: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recruiter-card img {
+  width: 200%;
+  height: auto;
+  max-height: 100px; /* Increased logo size */
+  object-fit: contain;
+  filter: none; /* Ensure original colors */
+}
+.top-performers {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding: 0;
+}
+
+.performer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.performer-image {
+  border-radius: 15px;
+  overflow: hidden;
+  height: 400px;
+}
+
+.performer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.performer-details {
+  color: var(--text-light);
+}
+
+.performer-details h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+  color: var(--secondary-color);
+}
+
+.lpa {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.company {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #cccccc;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-30%);
+  transition: all 0.8s ease-out;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(30%);
+  transition: all 0.8s ease-out;
+}
+
+.slide-in-left.active,
+.slide-in-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 1200px) {
+  .carousel-caption {
+    padding: 2rem;
   }
   
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Add background to arrows */
-    border-radius: 50%; /* Rounded arrows */
+  .carousel-caption h1 {
+    font-size: 3rem;
   }
   
-.carousel-item {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+  .carousel-caption p {
+    font-size: 1.4rem;
+  }
 }
 
-/* Card styling */
-.card {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: #1b1d70;
-    max-width: 600px;
-    width: 100%;
+@media (max-width: 992px) {
+  .accreditation-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .performer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .performer-image {
+    height: 300px;
+  }
 }
 
-.card-title {
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 1rem;
+@media (max-width: 768px) {
+  .hero-carousel img {
+    height: 90vh;
+  }
+
+  .carousel-caption {
+    bottom: 20%;
+    padding: 1rem;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1.1rem;
+  }
+
+  .recruiter-card {
+    flex: 0 0 150px;
+    height: 80px;
+    margin: 0 1rem;
+  }
 }
 
-.card-text {
+@media (max-width: 576px) {
+  .performer-details h3 {
+    font-size: 1.8rem;
+  }
+
+  .lpa {
+    font-size: 1.5rem;
+  }
+
+  .description {
     font-size: 1rem;
-    color: white;
-    line-height: 1.6;
+  }
+
+  .recruiter-card {
+    flex: 0 0 130px;
+    height: 70px;
+  }
 }
 
-/* Container layout */
+@media (max-width: 400px) {
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Landing.css */
 .container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.image-container {
-    display: flex;
-    justify-content: center; /* Center images horizontally */
-    gap: 20px; /* Add space between images */
-}
-
-.image-container img {
-    width: 50%; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 }

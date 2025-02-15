@@ -1,55 +1,78 @@
 /* Footer container styling */
 footer {
-    background-color: #0b0c45;
-    color: white;
-   
-  }
-  
+  background-color: #001F3F;
+  color: white;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+}
+
+/* Ensures the footer sticks to the bottom */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.content-wrapper {
+  flex: 1;
+}
+
+/* Footer items */
+.footer-item {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Links inside the footer */
+footer a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #1e90ff; /* Brighter blue on hover */
+  text-decoration: underline;
+}
+
+/* Social media icons styling */
+footer i {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+footer i:hover {
+  color: lightblue;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .footer-item {
-    flex: 1;
-    text-align: center;
-    margin: 10px;
-  }
-  
-  .title {
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  
-  footer a {
-    color: lightblue;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    color: #1e90ff; /* A brighter shade of blue for hover effect */
-    text-decoration: underline;
-  }
-  
-  /* Social media icons styling */
-  footer i {
-    color: white;
-    transition: color 0.3s ease;
-  }
-  
-  footer i:hover {
-    color: lightblue;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .footer-item {
       flex: 100%;
       margin: 20px 0;
-    }
-  
-    footer .d-flex {
+  }
+
+  footer .d-flex {
       flex-direction: column;
       align-items: center;
-    }
   }
-  
-  /* Horizontal rule for separation (optional) */
-  footer .border-top {
-    border-top: 1
-  }  
+}
+
+/* Fix border styling */
+footer .border-top {
+  border-top: 1px solid white;
+}

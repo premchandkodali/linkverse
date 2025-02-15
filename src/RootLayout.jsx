@@ -1,19 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import { Outlet, useLocation } from "react-router-dom";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import {Outlet } from "react-router-dom";
- import './RootLayout.css';
+import './RootLayout.css';
+
 function RootLayout() {
+
   return (
-    <div>
-        <Header/>
-          <h4 className="heading">LinkVerse</h4>
-            <div style={{minHeight:"57.5vh"}} className='container'> 
+    <div >
+      <Header />
+      <br /><br /><br />
+      <div style={{minHeight:"60.9vh"}} > 
                 <Outlet/>
             </div>
-        <Footer/>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default RootLayout
+export default RootLayout;

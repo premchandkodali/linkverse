@@ -1,23 +1,40 @@
+// App.jsx
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
-import Landing from './components/Landing/Landing';  // Correct import for Landingpage
-import RootLayout from './RootLayout'; // Assuming you have a RootLayout component
-import RoutingError from './components/RoutingError';
+import Landing from './components/Landing/Landing';
+import RootLayout from './RootLayout';
 import Faculty from './components/Faculty/Faculty';
-// Define the router
+import SignIn from './components/Header/Signin'; // Import SignIn component
+import RoutingError from './components/RoutingError';
+import Faq from  './components/Faq/Faq'; // Import Faq component 
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <RootLayout />, // Root layout element
+    element: <RootLayout />, 
+    errorElement: <RoutingError />,
     children: [
       {
-        path: '/Landing',  // Route to Landingpage component
-        element: <Landing/>, // Landingpage component
+        path: '/landing',
+        element: <Landing />,
       },
-      // {
-      //   path: '/Faculty',  // Route to Landingpage component
-      //   element: <Faculty/>, // Landingpage component
-      // },
+      {
+        path: 'faculty',
+        element: <Faculty />,
+      },
+      {
+        path: 'signin', // Add route for SignIn component
+        element: <SignIn />,
+      },
+      {
+        path: 'Faqs', // Add route for SignIn component
+        element: <Faq />,
+      },
+      // Add this catch-all route for hash navigation
+      {
+        path: '/#:section',
+        element: <Landing />,
+      }
     ],
   },
 ]);

@@ -3,7 +3,7 @@ import './Footer.css'; // Optional: Add custom styles for your footer
 
 const Footer = () => {
   return (
-    <footer className="text-center  mt-4 border-top">
+    <footer className="text-center border-top">
       <div className="d-flex flex-wrap justify-content-between">
         {/* Address Section */}
         <div className="footer-item mb-3">
