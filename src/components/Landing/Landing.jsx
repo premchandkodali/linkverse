@@ -1,5 +1,5 @@
 // Landing.jsx
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import a1 from '../../assets/a1.jpg';
 import a2 from '../../assets/a2.jpg';
@@ -10,7 +10,7 @@ import microsoft from '../../assets/microsoft.png';
 import sphereme from '../../assets/sphereme.png';
 import techmahindra from '../../assets/techmahindra.avif';
 import veetech from '../../assets/veetech.webp';
-import student from '../../assets/student.jpg';
+import student from '../../assets/student.jpg'
 import './Landing.css';
 
 const Landing = () => {
@@ -54,7 +54,7 @@ const Landing = () => {
   }, [location.hash]);
 
   return (
-    <div className="landing-container">
+    <div className="landing-container-fluid">
       {/* Hero Carousel */}
       <div className="hero-carousel">
         <div id="mainCarousel" className="carousel slide" data-bs-ride="carousel">
@@ -134,7 +134,7 @@ const Landing = () => {
               <p className="description">
                 Computer Science graduate with exceptional problem-solving skills.
                 Developed innovative machine learning models during internships.
-                Recipient of the President's Gold Medal for academic excellence.
+                Recipient of the Presidents Gold Medal for academic excellence.
               </p>
             </div>
           </div>

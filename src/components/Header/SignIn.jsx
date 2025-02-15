@@ -9,7 +9,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className={`container ${isStudentSignIn ? 'student-sign-in' : 'faculty-sign-in'}`}>
+    <div className={`container-fluid ${isStudentSignIn ? 'student-sign-in' : 'faculty-sign-in'}`}>
       <div className="row">
         {/* FACULTY SIGN IN */}
         <div className="col align-items-center flex-col faculty-sign-in">

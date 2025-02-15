@@ -16,7 +16,7 @@ body {
   background-color: #fff; /* Ensure the background color is white */
 }
 
-.landing-container {
+.landing-container-fluid {
   overflow-x: hidden;
 }
 
@@ -186,7 +186,7 @@ body {
   font-size: 1.1rem;
 }
 
-.recruiters-container {
+.recruiters-container-fluid {
   max-width: 100%;
   margin: 0 auto;
   position: relative;
@@ -387,7 +387,7 @@ html {
 }
 
 /* Landing.css */
-.container {
+.container-fluid {
   width: 100%;
   padding: 0;
   margin: 0;

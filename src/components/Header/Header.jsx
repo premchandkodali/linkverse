@@ -1,34 +1,36 @@
-import React, { useState, useEffect, useRef } from "react";
+import  { useRef } from "react";
 import { Link } from "react-router-dom";
 import logo from '../../assets/logo.png';
 import "./Header.css";
-
+import { useNavigate } from "react-router-dom";
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+
   const dropdownRef = useRef(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+  const navigate = useNavigate();
 
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowDropdown(false);
+    const handleNavigation = (id) => {
+    navigate("/landing"); // Navigate to Landing first (if needed)
+    
+    setTimeout(() => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
       }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+    }, 100); // Adding delay to ensure DOM update
+  }
+  const handleFacultyNavigation = (id) => {
+    navigate("/faculty"); // Navigate to Landing first (if needed)
+    setTimeout(() => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  }
 
   return (
-    <header className={`d-flex justify-content-between align-items-center p-3 ${isScrolled ? 'scrolled' : ''}`}>
+    <header className={`d-flex justify-content-between align-items-center p-3`}>
       <div className="ms-3">
         <img src={logo} alt="Logo" className="logo" />
       </div>
@@ -42,28 +44,24 @@ const Header = () => {
             </strong>
           </li>
           <li className="nav-item">
-            <strong>
-              <Link to="/Faculty" className="nav-link">
+          <button className="nav-link btn-link" onClick={() => handleFacultyNavigation("facultypage")}>
                 Faculty
-              </Link>
-            </strong>
+              </button>
           </li>
           <li className="nav-item">
-            <strong>
-              <Link to="#recruitment" className="nav-link">
+            <button className="nav-link btn-link" onClick={() => handleNavigation("recruitment")}>
                 Achievements
-              </Link>
-            </strong>
+              </button>
           </li>
           <li className="nav-item">
             <strong>
               <Link to="/Faqs" className="nav-link">
-                FAQ's
+                FAQs
               </Link>
             </strong>
           </li>
         </ul>
-        <div className="profile-icon-container" ref={dropdownRef}>
+        <div className="profile-icon-container-fluid" ref={dropdownRef}>
           <button 
             className="profile-icon-btn"
             aria-label="Profile menu"

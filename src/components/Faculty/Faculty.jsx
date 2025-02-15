@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Search } from 'lucide-react';
 import './Faculty.css';
 
@@ -58,8 +58,8 @@ function Faculty() {
   return (
     <div className='faculty-page'>
       <div className="faculty-header">
-        <h1>Faculty Profiles</h1>
-        <div className="search-container">
+        <h1 id='facultypage'>Faculty Profiles</h1>
+        <div className="search-container-fluid">
           <input
             type="text"
             placeholder="Search faculty..."
@@ -86,7 +86,7 @@ function Faculty() {
           filteredFaculty.map((faculty) => (
             <div key={faculty.id} className="faculty-card">
               <div className="card-inner">
-                <div className="image-container">
+                <div className="image-container-fluid">
                   <img src={faculty.image} alt={faculty.name} className="faculty-image" />
                   <div className="overlay">
                     <div className="faculty-info">

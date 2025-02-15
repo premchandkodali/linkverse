@@ -19,7 +19,7 @@
 }
 
 /* Search styles */
-.search-container {
+.search-container-fluid {
   position: relative;
 }
 .search-input {
@@ -99,7 +99,7 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.image-container {
+.image-container-fluid {
   position: relative;
   aspect-ratio: 1;
   overflow: hidden;

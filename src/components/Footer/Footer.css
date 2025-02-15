@@ -1,4 +1,4 @@
-/* Footer container styling */
+/* Footer container-fluid styling */
 footer {
   background-color: #001F3F;
   color: white;
@@ -16,7 +16,7 @@ html, body, #root {
   padding: 0;
 }
 
-.app-container {
+.app-container-fluid {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Full viewport height */

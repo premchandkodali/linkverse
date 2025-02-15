@@ -48,12 +48,12 @@ header.scrolled {
     box-shadow: 0 4px 8px rgba(0, 0, 255, 0.5);
 }
 
-.profile-icon-container {
+.profile-icon-container-fluid {
     position: relative;
     margin-left: 1rem;
 }
 
-.profile-icon-container:hover .profile-dropdown {
+.profile-icon-container-fluid:hover .profile-dropdown {
     display: block;
 }
 
