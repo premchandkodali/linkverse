@@ -7,25 +7,43 @@
     --white: #ffffff;
     --gray: #efefef;
     --gray-2: #757575;
+
+    --facebook-color: #4267B2;
+    --google-color: #DB4437;
+    --twitter-color: #1DA1F2;
+    --insta-color: #E1306C;
 }
 
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+<<<<<<< HEAD:frontend/src/components/Landing/SignIn.css
 .container-fluid {
     min-height: 100vh;
     padding: 0;
     margin: 0;
+=======
+html,
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+.container-fluid {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+>>>>>>> 4291c7f (commit):src/components/Header/SignIn.css
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
-    width: 100%; /* Ensure the row takes full width */
 }
 
 .col {
@@ -42,7 +60,6 @@
 .form-wrapper {
     width: 100%;
     max-width: 28rem;
-    z-index: 10; /* Ensure the form is on top */
 }
 
 .form {
@@ -121,16 +138,88 @@
     flex-direction: column;
 }
 
+.social-list {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+    transition-delay: 1.2s;
+}
+
+.social-list>div {
+    color: var(--white);
+    margin: 0 .5rem;
+    padding: .7rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    cursor: pointer;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+}
+
+.social-list>div:nth-child(1) {
+    transition-delay: 1.4s;
+}
+
+.social-list>div:nth-child(2) {
+    transition-delay: 1.6s;
+}
+
+.social-list>div:nth-child(3) {
+    transition-delay: 1.8s;
+}
+
+.social-list>div:nth-child(4) {
+    transition-delay: 2s;
+}
+
+.social-list>div>i {
+    font-size: 1.5rem;
+    transition: .4s ease-in-out;
+}
+
+.social-list>div:hover i {
+    transform: scale(1.5);
+}
+
+.facebook-bg {
+    background-color: var(--facebook-color);
+}
+
+.google-bg {
+    background-color: var(--google-color);
+}
+
+.twitter-bg {
+    background-color: var(--twitter-color);
+}
+
+.insta-bg {
+    background-color: var(--insta-color);
+}
+
 .pointer {
     cursor: pointer;
 }
 
+<<<<<<< HEAD:frontend/src/components/Landing/SignIn.css
 .container-fluid.student-sign-in .form.student-sign-in,
 .container-fluid.student-sign-in .social-list.student-sign-in,
 .container-fluid.student-sign-in .social-list.student-sign-in>div,
 .container-fluid.faculty-sign-in .form.faculty-sign-in,
 .container-fluid.faculty-sign-in .social-list.faculty-sign-in,
 .container-fluid.faculty-sign-in .social-list.faculty-sign-in>div {
+=======
+.container-fluid.sign-in .form.sign-in,
+.container-fluid.sign-in .social-list.sign-in,
+.container-fluid.sign-in .social-list.sign-in>div,
+.container-fluid.sign-up .form.sign-up,
+.container-fluid.sign-up .social-list.sign-up,
+.container-fluid.sign-up .social-list.sign-up>div {
+>>>>>>> 4291c7f (commit):src/components/Header/SignIn.css
     transform: scale(1);
 }
 
@@ -139,7 +228,7 @@
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 5; /* Ensure the content is behind the form */
+    z-index: 6;
     width: 100%;
 }
 
@@ -167,24 +256,33 @@
     transition-delay: .4s;
 }
 
-.text.student-sign-in h2,
-.text.student-sign-in p,
-.img.student-sign-in img {
-    transform: translateX(250%);
-}
-
-.text.faculty-sign-in h2,
-.text.faculty-sign-in p,
-.img.faculty-sign-in img {
+.text.sign-in h2,
+.text.sign-in p,
+.img.sign-in img {
     transform: translateX(-250%);
 }
 
+<<<<<<< HEAD:frontend/src/components/Landing/SignIn.css
 .container-fluid.student-sign-in .text.student-sign-in h2,
 .container-fluid.student-sign-in .text.student-sign-in p,
 .container-fluid.student-sign-in .img.student-sign-in img,
 .container-fluid.faculty-sign-in .text.faculty-sign-in h2,
 .container-fluid.faculty-sign-in .text.faculty-sign-in p,
 .container-fluid.faculty-sign-in .img.faculty-sign-in img {
+=======
+.text.sign-up h2,
+.text.sign-up p,
+.img.sign-up img {
+    transform: translateX(250%);
+}
+
+.container-fluid.sign-in .text.sign-in h2,
+.container-fluid.sign-in .text.sign-in p,
+.container-fluid.sign-in .img.sign-in img,
+.container-fluid.sign-up .text.sign-up h2,
+.container-fluid.sign-up .text.sign-up p,
+.container-fluid.sign-up .img.sign-up img {
+>>>>>>> 4291c7f (commit):src/components/Header/SignIn.css
     transform: translateX(0);
 }
 
@@ -200,18 +298,18 @@
     transform: translate(35%, 0);
     background-image: linear-gradient(-45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     transition: 1s ease-in-out;
-    z-index: 4; /* Ensure the background is behind the content */
+    z-index: 6;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-bottom-right-radius: max(50vw, 50vh);
     border-top-left-radius: max(50vw, 50vh);
 }
 
-.student-sign-in::before {
+.container-fluid.sign-in::before {
     transform: translate(0, 0);
     right: 50%;
 }
 
-.faculty-sign-in::before {
+.container-fluid.sign-up::before {
     transform: translate(100%, 0);
     right: 50%;
 }
@@ -223,6 +321,7 @@
         width: 100%;
     }
 
+<<<<<<< HEAD:frontend/src/components/Landing/SignIn.css
     .form-wrapper {
         max-width: 90%;
     }
@@ -248,6 +347,11 @@
     .container-fluid::before,
     .container-fluid.student-sign-in::before,
     .container-fluid.faculty-sign-in::before {
+=======
+    .container-fluid::before,
+    .container-fluid.sign-in::before,
+    .container-fluid.sign-up::before {
+>>>>>>> 4291c7f (commit):src/components/Header/SignIn.css
         height: 100vh;
         border-bottom-right-radius: 0;
         border-top-left-radius: 0;
@@ -256,8 +360,17 @@
         right: 0;
     }
 
+<<<<<<< HEAD:frontend/src/components/Landing/SignIn.css
     .container-fluid.student-sign-in .col.student-sign-in,
     .container-fluid.faculty-sign-in .col.faculty-sign-in {
+=======
+    /* .container-fluid.sign-in .col.sign-up {
+        transform: translateY(100%);
+    } */
+
+    .container-fluid.sign-in .col.sign-in,
+    .container-fluid.sign-up .col.sign-up {
+>>>>>>> 4291c7f (commit):src/components/Header/SignIn.css
         transform: translateY(0);
     }
 

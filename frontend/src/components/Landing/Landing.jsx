@@ -9,7 +9,7 @@ import microsoft from '../../assets/microsoft.png';
 import sphereme from '../../assets/sphereme.png';
 import techmahindra from '../../assets/techmahindra.avif';
 import veetech from '../../assets/veetech.webp';
-import student from '../../assets/student.jpg';
+import student from '../../assets/student.jpg'; // Ensure this path is correct
 import './Landing.css';
 
 const Landing = () => {
