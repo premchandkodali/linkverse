@@ -6,7 +6,7 @@ import RootLayout from './RootLayout';
 import Faculty from './components/Faculty/Faculty';
 import SignIn from './components/Header/Signin'; // Import SignIn component
 import RoutingError from './components/RoutingError';
-import Faq from  './components/Faq/Faq'; // Import Faq component 
+import Faq from './components/Faq/Faq'; // Import Faq component 
 
 const router = createBrowserRouter([
   {
@@ -15,7 +15,11 @@ const router = createBrowserRouter([
     errorElement: <RoutingError />,
     children: [
       {
-        path: '/landing',
+        index: true, // This sets Landing as the default route
+        element: <Landing />,
+      },
+      {
+        path: 'landing',
         element: <Landing />,
       },
       {
@@ -27,7 +31,7 @@ const router = createBrowserRouter([
         element: <SignIn />,
       },
       {
-        path: 'Faqs', // Add route for SignIn component
+        path: 'Faqs', // Add route for Faq component
         element: <Faq />,
       },
       // Add this catch-all route for hash navigation

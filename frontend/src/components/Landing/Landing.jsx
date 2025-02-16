@@ -1,5 +1,4 @@
-// Landing.jsx
-import  { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import a1 from '../../assets/a1.jpg';
 import a2 from '../../assets/a2.jpg';
@@ -10,7 +9,7 @@ import microsoft from '../../assets/microsoft.png';
 import sphereme from '../../assets/sphereme.png';
 import techmahindra from '../../assets/techmahindra.avif';
 import veetech from '../../assets/veetech.webp';
-import student from '../../assets/student.jpg'
+import student from '../../assets/student.jpg';
 import './Landing.css';
 
 const Landing = () => {
@@ -76,6 +75,14 @@ const Landing = () => {
               </div>
             </div>
           </div>
+          <button className="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button className="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
 
