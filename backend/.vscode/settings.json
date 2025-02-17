@@ -1,0 +1,15 @@
+{
+    "java.home": "/path/to/your/java/home",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.format.settings.url": "file:///path/to/your/formatter/settings",
+    "java.format.settings.profile": "YourProfileName",
+    "java.import.gradle.enabled": true,
+    "java.import.maven.enabled": true,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "java.project.sourcePaths": [
+        "src/main/java"
+    ],
+    "java.project.outputPath": "target/classes"
+}
