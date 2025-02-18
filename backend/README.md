@@ -1,57 +1,23 @@
-# Backend Project
+# Backend Express.js Project
 
-This is a backend project that demonstrates a simple Java servlet application.
+This folder contains the backend implementation of the project using Express.js. Below is a brief overview of the structure and purpose of the files within the `src` directory.
 
-## Project Structure
+## Directory Structure
 
-```
-backend
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │   └── com
-│   │   │       └── example
-│   │   │           └── servlet
-│   │   │               └── HelloWorldServlet.java
-│   │   └── resources
-│   │       └── application.properties
-├── .vscode
-│   └── settings.json
-├── pom.xml
-└── README.md
-```
+- **src/app.ts**: The entry point of the application. It initializes the Express app, sets up middleware, and defines the routes.
+  
+- **src/controllers/index.ts**: Contains the `IndexController` class, which handles the logic for the root route of the application.
 
-## Setup Instructions
+- **src/routes/index.ts**: Defines the routing for the application. It utilizes the `IndexController` to manage the root route.
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
+- **src/types/index.ts**: Contains TypeScript interfaces that extend the Express library's Request and Response interfaces for better type safety.
 
-2. Navigate to the project directory:
-   ```
-   cd backend
-   ```
+## Getting Started
 
-3. Build the project using Maven:
-   ```
-   mvn clean install
-   ```
+1. **Install Dependencies**: Run `npm install` to install the required packages.
+2. **Compile TypeScript**: Use `tsc` to compile the TypeScript files.
+3. **Run the Application**: Start the server using `node dist/app.js` (or the appropriate command based on your setup).
 
-4. Run the application:
-   ```
-   mvn spring-boot:run
-   ```
+## Contributing
 
-## Usage
-
-Once the application is running, you can access the servlet at:
-```
-http://localhost:8080/hello
-```
-
-This will trigger the `HelloWorldServlet` and return a greeting message.
-
-## Configuration
-
-Configuration properties can be found in `src/main/resources/application.properties`. Adjust the settings as needed for your environment.
+Feel free to submit issues or pull requests for improvements or bug fixes.
