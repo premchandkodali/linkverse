@@ -1,23 +1,20 @@
 {
-  "name": "backend",
+  "name": "linkverse-backend",
   "version": "1.0.0",
-  "description": "Backend for the project using Express.js",
-  "main": "src/app.ts",
+  "description": "Backend for the Linkverse project",
+  "main": "app.js",
   "scripts": {
-    "start": "ts-node src/app.ts",
-    "build": "tsc",
-    "dev": "ts-node-dev src/app.ts"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
-    "dotenv": "^16.4.7",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mysql2": "^3.12.0"
+    "mysql2": "^2.2.5"
   },
   "devDependencies": {
-    "@types/express": "^4.17.13",
-    "ts-node": "^10.0.0",
-    "ts-node-dev": "^1.1.8",
-    "typescript": "^4.5.0"
+    "nodemon": "^2.0.22"
   },
   "author": "",
   "license": "ISC"

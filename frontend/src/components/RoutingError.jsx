@@ -1,15 +1,14 @@
-import React from 'react'
-import { useRouteError } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function RoutingError(err) {
-   err=useRouteError();
-    console.log(err);
+const RoutingError = () => {
   return (
     <div>
-        <h1 className='text-center text-denger'>{err.data}</h1>
-        <h2 className='text-center display-3 text-warning'>{err.status}-{err.statusText}</h2>
+      <h1>404 - Page Not Found</h1>
+      <p>The page you are looking for does not exist.</p>
+     
     </div>
-  )
-}
+  );
+};
 
-export default RoutingError
+export default RoutingError;

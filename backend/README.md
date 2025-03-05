@@ -1,22 +1,50 @@
-# Backend Express.js Project
+# Linkverse Backend
 
-This folder contains the backend implementation of the project using Express.js. Below is a brief overview of the structure and purpose of the files within the `src` directory.
+This is the backend for the Linkverse project, which connects to a MySQL database and provides an API for the frontend application.
 
-## Directory Structure
+## Project Structure
 
-- **src/app.ts**: The entry point of the application. It initializes the Express app, sets up middleware, and defines the routes.
-  
-- **src/controllers/index.ts**: Contains the `IndexController` class, which handles the logic for the root route of the application.
+```
+linkverse-backend
+├── backend
+│   ├── config
+│   │   └── database.js
+│   ├── controllers
+│   │   └── index.js
+│   ├── models
+│   │   └── index.js
+│   ├── routes
+│   │   └── index.js
+│   └── app.js
+├── package.json
+└── README.md
+```
 
-- **src/routes/index.ts**: Defines the routing for the application. It utilizes the `IndexController` to manage the root route.
+## Setup Instructions
 
-- **src/types/index.ts**: Contains TypeScript interfaces that extend the Express library's Request and Response interfaces for better type safety.
+1. **Clone the repository:**
+   ```
+   git clone <repository-url>
+   cd linkverse-backend
+   ```
 
-## Getting Started
+2. **Install dependencies:**
+   ```
+   npm install
+   ```
 
-1. **Install Dependencies**: Run `npm install` to install the required packages.
-2. **Compile TypeScript**: Use `tsc` to compile the TypeScript files.
-3. **Run the Application**: Start the server using `node dist/app.js` (or the appropriate command based on your setup).
+3. **Configure the database:**
+   - Update the `backend/config/database.js` file with your MySQL database credentials.
+
+4. **Run the application:**
+   ```
+   npm start
+   ```
+
+## Usage
+
+- The backend provides a RESTful API for the Linkverse project.
+- You can access the API endpoints defined in `backend/routes/index.js`.
 
 ## Contributing
 

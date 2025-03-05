@@ -1,0 +1,99 @@
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  border: 2px solid blue;
+  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.5);
+}
+
+.student-header {
+  background-color: #28a745; /* Green color */
+  padding: 40px 40px; /* Increase padding to increase height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.student-header .student-logo {
+  display: flex;
+  align-items: center;
+}
+
+.student-header .student-logo img {
+  height: 80px; /* Adjust the height of the logo if needed */
+  max-height: 100%;
+  width: auto;
+}
+
+.student-header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.student-header nav ul li {
+  margin: 0 10px;
+}
+
+.student-header nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.student-header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.notification-icon {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('../../assets/notification-icon.png') no-repeat center center;
+  background-size: contain;
+}
+
+.notification-icon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* New styles for the logo */
+.student-logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.student-logo img:hover {
+  border: 2px solid blue;
+  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.5);
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.logout-button:hover {
+  text-decoration: underline;
+}

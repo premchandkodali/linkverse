@@ -1,21 +1,37 @@
-import React, { useEffect } from 'react';
-import { Outlet, useLocation } from "react-router-dom";
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import './RootLayout.css';
+import React, { useState } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import Header from './components/Landing/Header'; // Import Header component
+import StudentHeader from './components/StudComp/StudentHeader'; // Import StudentHeader component
+import FacultyHeader from './components/FacComp/FacultyHeader'; // Import FacultyHeader component
+import Footer from './components/Footer/Footer'; // Import Footer component
+import './App.css'; // Import global styles
 
-function RootLayout() {
+const RootLayout = () => {
+  const location = useLocation();
+
+  const [authState, setAuthState] = useState({
+    isAuthenticated: false,
+    userType: null,
+    username: null,
+  });
 
   return (
-    <div >
-      <Header />
-      <br /><br /><br />
-      <div style={{minHeight:"60.9vh"}} > 
-                <Outlet/>
-            </div>
+    <div className="app-container-fluid">
+      {authState.isAuthenticated ? (
+        authState.userType === 'student' ? (
+          <StudentHeader setAuthState={setAuthState} />
+        ) : (
+          <FacultyHeader setAuthState={setAuthState} />
+        )
+      ) : (
+        <Header />
+      )}
+      <div className="content-wrapper">
+        <Outlet context={{ setAuthState }} />
+      </div>
       <Footer />
     </div>
   );
-}
+};
 
 export default RootLayout;

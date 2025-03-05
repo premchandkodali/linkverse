@@ -1,0 +1,207 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Increased height */
+  z-index: 1000;
+  background-color: #001F3F; /* Default blue theme */
+  color: #f7f6f6;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+header.scrolled {
+  background-color: #0a0a1a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  height: 80px; /* Ensure this matches the height of the header */
+}
+
+.nav-link {
+  color: #007bff !important;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #ffffff !important;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  border: 2px solid blue;
+  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.5);
+}
+
+.profile-icon-container {
+  position: relative;
+  margin-left: 1rem;
+}
+
+.profile-icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #110b1f;
+  transition: all 0.3s ease;
+}
+
+.profile-icon-btn:hover {
+  transform: scale(1.1);
+  color: #00b4d8;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.profile-dropdown {
+  display: block; /* Ensure the dropdown is displayed when open */
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #0a0a1a; /* Match the header color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  min-width: 200px;
+  margin-top: 0.8rem;
+  overflow: hidden;
+}
+
+.profile-dropdown .dropdown-item {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.profile-dropdown .dropdown-link {
+  text-decoration: none;
+  color: #f7f6f6; /* Match the header text color */
+}
+
+.profile-dropdown .dropdown-link:hover {
+  color: #007bff;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #f7f6f6; /* Match the header text color */
+}
+
+.dropdown-item:hover {
+  background-color: #001F3F; /* Use a color from the header palette */
+}
+
+.dropdown-link {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  font-weight: 500;
+}
+
+header.scrolled .profile-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+header.scrolled .nav-link {
+  color: #00b4d8 !important;
+}
+
+header.scrolled .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Brown theme */
+.header.brown {
+  background-color: brown;
+}
+
+.header.brown .nav-link {
+  color: #f7f6f6 !important;
+}
+
+.header.brown .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Orange theme */
+.header.orange {
+  background-color: orange;
+}
+
+.header.orange .nav-link {
+  color: #f7f6f6 !important;
+}
+
+.header.orange .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Green theme */
+.header.green {
+  background-color: green;
+}
+
+.header.green .nav-link {
+  color: #f7f6f6 !important;
+}
+
+.header.green .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Red theme */
+.header.red {
+  background-color: red;
+}
+
+.header.red .nav-link {
+  color: #f7f6f6 !important;
+}
+
+.header.red .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Purple theme */
+.header.purple {
+  background-color: purple;
+}
+
+.header.purple .nav-link {
+  color: #f7f6f6 !important;
+}
+
+.header.purple .nav-link:hover {
+  color: #ffffff !important;
+}
