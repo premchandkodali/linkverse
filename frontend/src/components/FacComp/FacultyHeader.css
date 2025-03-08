@@ -1,19 +1,19 @@
 .faculty-header {
   background-color: #8B4513; /* Brown color */
-  padding: 40px 40px;
+  padding: 10px 20px; /* Adjust padding to match StudentHeader */
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #dee2e6;
 }
 
-.faculty-header .logo {
+.faculty-header .faculty-logo {
   display: flex;
   align-items: center;
 }
 
-.faculty-header .logo img {
-  height: 80px;
+.faculty-header .faculty-logo img {
+  height: 40px; /* Adjust height to match StudentHeader */
   max-height: 100%;
   width: auto;
 }
