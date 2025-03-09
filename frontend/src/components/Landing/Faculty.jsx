@@ -1,54 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import './Faculty.css';
 
-const facultyData = [
-  {
-    id: 1,
-    name: "Dr. Sarah Mitchell",
-    role: "Professor",
-    department: "Computer Science",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400"
-  },
-  {
-    id: 2,
-    name: "Dr. James Wilson",
-    role: "Associate Professor",
-    department: "Mathematics",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400&h=400"
-  },
-  {
-    id: 3,
-    name: "Dr. Emily Chen",
-    role: "Assistant Professor",
-    department: "Physics",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400&h=400"
-  },
-  {
-    id: 4,
-    name: "Dr. Michael Brown",
-    role: "Professor",
-    department: "Engineering",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400"
-  },
-  {
-    id: 5,
-    name: "Dr. Lisa Anderson",
-    role: "Associate Professor",
-    department: "Chemistry",
-    image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&q=80&w=400&h=400"
-  },
-  {
-    id: 6,
-    name: "Dr. Robert Taylor",
-    role: "Professor",
-    department: "Biology",
-    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&q=80&w=400&h=400"
-  }
-];
-
 function Faculty() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [facultyData, setFacultyData] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/faculty')
+      .then(response => response.json())
+      .then(data => setFacultyData(data))
+      .catch(error => console.error('Error fetching faculty data:', error));
+  }, []);
 
   const filteredFaculty = facultyData.filter(faculty =>
     faculty.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -91,7 +54,7 @@ function Faculty() {
                   <div className="overlay">
                     <div className="faculty-info">
                       <h3>{faculty.name}</h3>
-                      <p className="role">{faculty.role}</p>
+                      <p className="role">{faculty.designation}</p>
                       <p className="department">{faculty.department}</p>
                     </div>
                   </div>
