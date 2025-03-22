@@ -21,12 +21,6 @@
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD:frontend/src/components/Landing/SignIn.css
-.container-fluid {
-    min-height: 100vh;
-    padding: 0;
-    margin: 0;
-=======
 html,
 body {
     height: 100%;
@@ -37,7 +31,6 @@ body {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
->>>>>>> 4291c7f (commit):src/components/Header/SignIn.css
 }
 
 .row {
