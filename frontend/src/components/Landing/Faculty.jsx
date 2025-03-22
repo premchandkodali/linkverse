@@ -21,11 +21,7 @@ function Faculty() {
   return (
     <div className='faculty-page'>
       <div className="faculty-header">
-<<<<<<< HEAD:frontend/src/components/Landing/Faculty.jsx
-        <h1 id='facultypage'>Faculty Profiles</h1>
-=======
         <h1>Faculty Profiles</h1>
->>>>>>> 4291c7f (commit):src/components/Faculty/Faculty.jsx
         <div className="search-container-fluid">
           <input
             type="text"
